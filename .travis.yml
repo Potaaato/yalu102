@@ -5,4 +5,4 @@ before_install:
 - gem install cocoapods 
 script:
 - set -o pipefail && xcodebuild -list
-- set -o pipefail && xcodebuild clean build build-for-testing -project yalu102.xcodeproj -xcconfig yalu102.xcconfig	| xcpretty
+- set -o pipefail && xcodebuild build -project yalu102.xcodeproj -xcconfig yalu102.xcconfig | xcpretty
