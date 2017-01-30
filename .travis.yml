@@ -1,6 +1,7 @@
+osx_image: xcode8.1
 language: objective-c
-xcode_project: yalu102.xcodeproj
-xcode_scheme: yalu102
+cache: cocoapods
 before_install:
-  - brew update
-  - brew outdated xctool || brew upgrade xctool
+- gem install cocoapods 
+script:
+- set -o pipefail && xcodebuild clean build build-for-testing -project Example/yalu102.xcodeproj -scheme yalu102 -configuration Debug | xcpretty
