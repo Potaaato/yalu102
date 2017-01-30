@@ -4,5 +4,4 @@ cache: cocoapods
 before_install:
 - gem install cocoapods 
 script:
-- set -o pipefail && xcodebuild -list
-- set -o pipefail && xcodebuild clean build build-for-testing -project yalu102.xcodeproj -scheme yalu102 -configuration Debug | xcpretty
+- set -o pipefail && xcodebuild clean build build-for-testing -project yalu102.xcodeproj -configuration Debug | xcpretty
